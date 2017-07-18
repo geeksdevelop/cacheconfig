@@ -1,0 +1,19 @@
+{
+    "name": "geeksdevelop/cacheconfig",
+    "description": "Prepare app configs",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Miguel Lobo",
+            "email": "wmaster732@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Geeksdevelop\\Cacheconfig\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
