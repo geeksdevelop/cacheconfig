@@ -17,6 +17,7 @@ class CacheConfigMiddleware
      */
     public function handle($request, Closure $next)
     {
+        $env = [];
         if (Cache::has(config('config.key'))) { 
             $env = Cache::get(config('config.key'));
         } else {
@@ -27,7 +28,7 @@ class CacheConfigMiddleware
            Cache::forever(config('config.key'), $env);
         }
         config(['app.config' => $env]);
-
+        
         return $next($request);
     }
 
